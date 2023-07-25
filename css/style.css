@@ -27,3 +27,19 @@ main {
     justify-content: center;
     margin-left: 2rem;
 }
+
+.options select{
+    padding: 2%;
+    width: 85px;
+}
+
+.result{
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #042340;
+    cursor: pointer;
+    height: 50px;
+    color: #fff;
+    font-weight: bold;
+}
