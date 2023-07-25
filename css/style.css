@@ -42,4 +42,11 @@ main {
     height: 50px;
     color: #fff;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+.swap{
+    cursor: pointer;
+    padding: 25px;
+
 }
