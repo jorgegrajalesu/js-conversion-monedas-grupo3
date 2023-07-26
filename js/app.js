@@ -17,6 +17,8 @@ let requestUrl = "https://api.exchangerate.host/latest?base=USD";
  * await dice que hay que esperar que tome la respuesta de la api requestUrl
  */
 
+// fetchRates();
+
 async function fetchRates(){
     let res = await fetch(requestUrl);
     res = await res.json();
@@ -49,5 +51,12 @@ function populateOptions() {
  * @param {Number} toCurr   moneda convertir
  */
 function convert(val,fromCurr,toCurr) {
-    
+    // declarar variables de ambito local
+    let v = (val/rates[fromCurr]) * rates[toCurr];
+    let v1 = v.toFixed(3);
+    // validar con if ternario
+    return v1 == 0.0 ? v1.toFixed(5) : v1;
+
 }
+
+
