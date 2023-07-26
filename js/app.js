@@ -16,9 +16,25 @@ let requestUrl = "https://api.exchangerate.host/latest?base=USD";
 /**
  * await dice que hay que esperar que tome la respuesta de la api requestUrl
  */
+
 async function fetchRates(){
     let res = await fetch(requestUrl);
     res = await res.json();
     rates = res.rates();
+}
+
+// función tradicional
+/**
+ * funcion para las opciones 
+ */
+function populateOptions() {
+    let val = '';
+    Object.keys(rates).forEach(code =>{
+        let str =`<option value="${code}">${code}</option>`;
+        // incrementar el option
+        // val = val + str;
+        val += str;
+    })
+    
 }
 
