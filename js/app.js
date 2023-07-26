@@ -35,6 +35,8 @@ function populateOptions() {
         // val = val + str;
         val += str;
     })
+    // mostrar las opciones
+    selects.forEach((s)=> (s.innerHTML = val));
     
 }
 
