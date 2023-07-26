@@ -89,3 +89,6 @@ resultBtn.addEventListener("click", ()=>{
     }
 
 });
+
+selects.forEach(s => s.addEventListener("change",displayRate));
+
