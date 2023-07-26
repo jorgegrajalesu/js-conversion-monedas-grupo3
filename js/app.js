@@ -59,4 +59,14 @@ function convert(val,fromCurr,toCurr) {
 
 }
 
+// funcion para los select
+function displayRate() {
+    // declarar variables de ambito local
+    let v1 = sel1.value;
+    let v2 = sel2.value;
 
+    let val = convert(1,v1, v2);
+    // imprimir en elemento html
+    
+    
+}
