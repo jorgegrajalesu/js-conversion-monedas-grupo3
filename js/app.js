@@ -11,3 +11,14 @@ let inpt2 = inputs[1];
 
 let rates ={};
 let requestUrl = "https://api.exchangerate.host/latest?base=USD";
+
+// función async
+/**
+ * await dice que hay que esperar que tome la respuesta de la api requestUrl
+ */
+async function fetchRates(){
+    let res = await fetch(requestUrl);
+    res = await res.json();
+    rates = res.rates();
+}
+
