@@ -21,6 +21,8 @@ async function fetchRates(){
     let res = await fetch(requestUrl);
     res = await res.json();
     rates = res.rates();
+    // utilizar la funcion populateOptions
+    populateOptions();
 }
 
 // función tradicional
@@ -39,4 +41,13 @@ function populateOptions() {
     selects.forEach((s)=> (s.innerHTML = val));
     
 }
-
+// crear la función para hacer la conversión 
+/**
+ * 
+ * @param {Number} val valor de conversion
+ * @param {Number} fromCurr moneda inicial 
+ * @param {Number} toCurr   moneda convertir
+ */
+function convert(val,fromCurr,toCurr) {
+    
+}
