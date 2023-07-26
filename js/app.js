@@ -17,7 +17,8 @@ let requestUrl = "https://api.exchangerate.host/latest?base=USD";
  * await dice que hay que esperar que tome la respuesta de la api requestUrl
  */
 
-// fetchRates();
+// llamar la función fetchRates
+fetchRates();
 
 async function fetchRates(){
     let res = await fetch(requestUrl);
@@ -91,4 +92,21 @@ resultBtn.addEventListener("click", ()=>{
 });
 
 selects.forEach(s => s.addEventListener("change",displayRate));
+
+document.querySelector('.swap').addEventListener("click",()=>{
+    let in1 = inpt1.value;
+    let in2 = inpt2.value;
+    let op1 = sel1.value;
+    let op2 = sel2.value;
+
+    inpt2.value = in1;
+    inpt1.value = in2;
+
+    sel2.value = op1;
+    sel1.value = op2;
+
+    // llamar la función 
+    displayRate();
+});
+
 
