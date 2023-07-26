@@ -23,7 +23,7 @@ fetchRates();
 async function fetchRates(){
     let res = await fetch(requestUrl);
     res = await res.json();
-    rates = res.rates();
+    rates = res.rates;
     // utilizar la funcion populateOptions
     populateOptions();
 }
