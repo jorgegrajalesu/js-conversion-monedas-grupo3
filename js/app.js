@@ -72,6 +72,20 @@ function displayRate() {
     
 }
 
-// listener y el evento click
+// listener y el evento click, con una función de flecha
 
+resultBtn.addEventListener("click", ()=>{
+    let fromCurr = sel1.value;
+    let fromVal = parseFloat(inpt1.value);
+    let toCurr = sel2.value;
 
+    // validar si no hay un valor
+    if (isNaN(fromVal)) {
+        alert("Ingresa un número, por favor");
+        
+    }else{
+        let cVal = convert(fromVal,fromCurr,toCurr);
+        inpt2.value = cVal;
+    }
+
+});
