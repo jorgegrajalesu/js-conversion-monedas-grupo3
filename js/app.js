@@ -71,3 +71,7 @@ function displayRate() {
     rate2.innerHTML = `${val} ${v2}`;
     
 }
+
+// listener y el evento click
+
+
